@@ -58,7 +58,7 @@
   when:
     - ansible_distribution == "Debian"
     - zabbix_repo == "zabbix"
-    - zabbix_agent_distribution_release is version('3.4', '>=')"
+    - "zabbix_agent_distribution_release is version('3.4', '>=')"
   become: yes
   tags:
     - zabbix-agent
@@ -89,7 +89,7 @@
   when:
     - ansible_distribution == "Ubuntu"
     - zabbix_repo == "zabbix"
-    - zabbix_agent_distribution_release is version('3.4', '>=')"
+    - "zabbix_agent_distribution_release is version('3.4', '>=')"
 
   become: yes
   tags:
