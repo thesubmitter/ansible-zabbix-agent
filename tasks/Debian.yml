@@ -11,7 +11,7 @@
 
 - name: "Debian | Install gpg key"
   apt_key:
-#    id: "{{ sign_keys[zabbix_short_version][zabbix_agent_distribution_release]['sign_key'] }}"
+    id: "{{ sign_keys[zabbix_short_version][zabbix_agent_distribution_release]['sign_key'] }}"
     url: http://repo.zabbix.com/zabbix-official-repo.key
   when:
     - zabbix_repo == "zabbix"
