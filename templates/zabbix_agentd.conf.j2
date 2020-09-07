@@ -141,6 +141,11 @@ HostMetadata={{ zabbix_agent_hostmetadata }}
 HostMetadataItem={{ zabbix_agent_hostmetadataitem }}
 {% endif %}
 
+{% if zabbix_agent_hostinterface is defined and zabbix_agent_hostinterface %}
+HostInterface={{ zabbix_agent_hostinterface }}
+{% endif %}
+
+
 ### option: refreshactivechecks
 #       how often list of active checks is refreshed, in seconds.
 #
