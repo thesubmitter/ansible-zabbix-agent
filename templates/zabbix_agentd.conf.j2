@@ -127,7 +127,7 @@ HostnameItem={{ zabbix_agent_hostnameitem }}
 #	if not defined, value will be acquired from hostmetadataitem.
 #
 {% if zabbix_agent_hostmetadata is defined and zabbix_agent_hostmetadata %}
-HostMetadata={{ zabbix_agent_hostmetadata }}
+HostMetadata={{zabbix_agent_hostmetadata_prefix | default ('')}}{{ zabbix_agent_hostmetadata }}
 {% endif %}
 
 ### option: hostmetadataitem
